@@ -23,4 +23,4 @@ Updating<-><-><-><-><-><-><-><-><-><-><->
 
 
 Unmounting<-><-><-><-><-><-><-><-><-><-><->
-componentWillUnmount() - method is invoked immediately before component is unmount and desteroyed
+1. componentWillUnmount() - method is invoked immediately before component is unmount and desteroyed
