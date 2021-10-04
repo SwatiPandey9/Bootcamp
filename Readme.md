@@ -1,3 +1,5 @@
+In this we have used class component
+
 About Lifecycle in Parent and Child component
 
 
