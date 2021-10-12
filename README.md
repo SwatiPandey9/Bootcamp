@@ -3,10 +3,10 @@
 
 2. In this project I used React-Native Stack Navigation and pass props (titleName) in Home.js which set a header title of detail screen
 3. Below is the screenshot ios i) screenShot of HomeScreen(Home.js) ii) screenShot of DetailScreen(Detail.js)
-![Simulator Screen Shot - iPhone Xʀ - 2021-10-12 at 14 12 12](https://user-images.githubusercon![Simulator Screen Shot - iPhone Xʀ - 2021-10-12 at 14 12 16](https://user-images.githubusercontent.com/91865197/136978427-84226698-16be-47b4-adb0-df94bf590792.png)
-tent.com/91865197/136978404-793698fb-5ede-4534-8585-f04af09081e7.png)
 
+![Simulator Screen Shot - iPhone Xʀ - 2021-10-12 at 14 12 12](https://user-images.githubusercontent.com/918![Simulator Screen Shot - iPhone Xʀ - 2021-10-12 at 14 12 16](https://user-images.githubusercontent.com/91865197/136978633-558910e5-5f43-4741-91aa-a9b8de4e4775.png)
+65197/136978617-13e4222a-806c-4ccb-802c-df92d8d28f3c.png)
 
-5. Below is the screenshot of Android i) screenShot of HomeScreen(Home.js) ii) screenShot of DetailScreen(Detail.js)
- ![AndroidStackNavigation](https://user-images.githubusercontent.com/91865197/136977439-e4df759b-7500-41cd-a531-eb4b0aa27772.png)
- ![AndroidStackNavigationDetailScreen](https://user-images.githubusercontent.com/91865197/136977420-d7d86064-f9af-4541-b1b6-f289eb94b0e4.png)
+4. 3. Below is the screenshot Android i) screenShot of HomeScreen(Home.js) ii) screenShot of DetailScre![AndroidStackNavigationDetailScreen](https://user-images.githubusercontent.com/91865197/136978722-7c10daae-f86d-43be-9df6-5ee18c2aaf1a.png)
+en(Detail.js)
+![AndroidStackNavigation](https://user-images.githubusercontent.com/91865197/136978732-504b4071-7d74-4b2a-8c80-bb535164ad6b.png)
