@@ -12,7 +12,7 @@ const Home = ({navigation}) => {
         onPress={() =>
           navigation.navigate('Detail', {
             company: 'To The New',
-            name: 'Detail Screen',
+            titleName: 'Detail Screen',
           })
         }
       />
