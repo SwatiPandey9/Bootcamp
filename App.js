@@ -31,7 +31,7 @@ const App = () => {
         <Stack.Screen
           name="Detail"
           component={Detail}
-          options={({route}) => ({title: route.params.name})}
+          options={({route}) => ({title: route.params.titleName})}
         />
       </Stack.Navigator>
     </NavigationContainer>
