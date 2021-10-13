@@ -10,6 +10,7 @@ class ShowSlider extends Component {
     }}
     render() {
         return (
+            <SafeAreaView>
             <View style={styles.container}>
              <Switch 
              value={this.state.isOn}
@@ -29,6 +30,7 @@ class ShowSlider extends Component {
             </View> :
             null} 
             </View>
+            </SafeAreaView>
         )
     }
   }
