@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, Switch , StyleSheet} from 'react-native'
+import { Text, View, Switch , StyleSheet, SafeAreaView} from 'react-native'
 import Slider from '@ptomasroos/react-native-multi-slider'
 class ShowSlider extends Component {
     constructor(){
