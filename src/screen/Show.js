@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Switch, StyleSheet, Text} from 'react-native';
+import {View, Switch, StyleSheet, Text, SafeAreaView} from 'react-native';
 
 import Slider from '@ptomasroos/react-native-multi-slider';
 
@@ -14,13 +14,13 @@ const Show = () => {
   const SliderValue = (value) => {
     setSliderVal(value);
   };
-  //
-  //
+  
   return (
+    <SafeAreaView>
     <View style={styles.container}>
         <Text style = {styles.titleText}>Show and Hide Slider</Text>
       <Switch value={onChange} onValueChange={toggleSwitch} />
-      {onChange ? null : (
+      {onChange ? (
         <View>
           <Slider
             min={0}
@@ -29,8 +29,10 @@ const Show = () => {
           />
           <Text style = {styles.sliderText}>Slider Value : {sliderVal}</Text>
         </View>
-      )}
+      )
+      : null }
     </View>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({
