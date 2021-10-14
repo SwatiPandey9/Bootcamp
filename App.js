@@ -9,14 +9,13 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 
-import ShowSlider from './src/screen/ShowSlider';
+
 import Show from './src/screen/Show';
 
 
 const App = () => {
     return(
       <View style = {styles.container}>
-        {/* <ShowSlider /> */}
         <Show />
       </View>
     )
