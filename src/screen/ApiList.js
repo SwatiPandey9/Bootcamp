@@ -33,12 +33,12 @@ const ApiList = () => {
       .then((json) => {
         setTimeout(() => {
           setRefresh(false);
-        }, 1000);
-
-        setData({
+          setData({
           pageNo,
           listData: pageNo === 1 ? json.data : [...data.listData, ...json.data],
         });
+        }, 1000);
+
       })
       .catch((error) => {
         console.error(error);
