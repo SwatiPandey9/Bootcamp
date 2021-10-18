@@ -49,13 +49,13 @@ const ItemImages = () => {
       {image.map((item) => (
         <View>
           <ImageBackground source={item.image} style={styles.itemImage}>
-            <>
+            
               <Text style={styles.newText}>NEW</Text>
               <Image
                 source={require('../assets/circle.png')}
                 style={styles.heart}
               />
-            </>
+           
           </ImageBackground>
           <Text style={styles.name}>{item.name}</Text>
           <Text style={styles.categoryText}>{item.category}</Text>
