@@ -76,7 +76,7 @@ export default function Join() {
             style={styles.searchImage}
             resizeMode="contain"
           />
-          <Text style={styles.signGoogleText}>Sign in with Google</Text>
+          <Text style={styles.signGoogleText}>Join in with Google</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.facebookButton}>
           <Image
@@ -84,7 +84,7 @@ export default function Join() {
             style={styles.searchImage}
             resizeMode="contain"
           />
-          <Text style={styles.signButtonText}>Sign in with Facebook</Text>
+          <Text style={styles.signButtonText}>Join in with Facebook</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.appleButton}>
           <Image
@@ -92,7 +92,7 @@ export default function Join() {
             style={styles.searchImage}
             resizeMode="contain"
           />
-          <Text style={styles.signButtonText}>Sign in with Apple</Text>
+          <Text style={styles.signButtonText}>Join in with Apple</Text>
         </TouchableOpacity>
         <View style={styles.signContainer}>
         <Text style={styles.signAccountText}>Already Have an account ?</Text>
