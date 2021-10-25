@@ -2,6 +2,11 @@
 
 Question1-  Use Alert, intercept Back Press and show the text to confirm go back.
 
+In the Home Screen I have Created two button  - Alert and Details
+In Alert screen  - Back Handler is shown
+In Detail Screen. - clipboard
+
+
 This is only working in Android
 Below is the ScreenShot
 
