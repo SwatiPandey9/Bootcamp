@@ -18,10 +18,6 @@ const fuency = navigation => {
   navigation.navigate('Signup');
 };
 
-// export const setData = async (key, value) => {
-//   await AsyncStorage.setItem(key, JSON.stringify(value));
-// };
-
 export const UseAlert = navigation => {
   Alert.alert('Hold on', 'Do you want to logout', [
     {
@@ -32,6 +28,3 @@ export const UseAlert = navigation => {
   ]);
 };
 
-// export default {setHomeData};
-// export {setHomeData, UseAlert, setData} // it is working
-// export default {UseAlert}
