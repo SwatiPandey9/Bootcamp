@@ -13,19 +13,6 @@ const RootStack = createNativeStackNavigator();
 const Stack = createNativeStackNavigator();
 
 const Stacknav = () => {
-  // const UseAlert = (navigation) =>{
-  //   Alert.alert(
-  //     "Hold On",
-  //     "Do you want to logout",
-  //     [
-  //       {
-  //         text: "Yes",
-  //         onPress: () => navigation.navigate('Signup')
-  //       },
-  //       { text: "No", onPress: () => null}
-  //     ]
-  //   );
-  //  }
 
   return (
     <Stack.Navigator initialRouteName="Signup">
