@@ -26,8 +26,6 @@ class Signup extends Component {
       this.props.navigation.navigate('Home');
     });
 
-    // CommonFunctions.setItem('name', 'Sameer)
-    // CommonFunctions.getItem('name')
   };
 
   nameFun = text => {
@@ -122,7 +120,6 @@ class Signup extends Component {
 
             <CustomButton
               name="Create"
-              // style={{backgroundColor: 'red', marginBottom: 20}}
               onPress={() => {
                 this.setUserData();
               }}
