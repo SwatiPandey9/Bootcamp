@@ -7,7 +7,7 @@ import {
   Image,
   
 } from 'react-native';
-import {Color} from '../utils';
+
 
 const {height, width} = Dimensions.get('window');
 
@@ -18,11 +18,11 @@ export default function InputText(props) {
     <View
       style={[
         styles.inputView,
-        {borderColor: focus ? Color.primaryBlue : 'white'},
+        {borderColor: focus ? '#005ce6' : 'white'},
       ]}>
       <Image
         source={props.image}
-        style={[styles.image, {tintColor: focus ? Color.primaryBlue : 'grey'}]}
+        style={[styles.image, {tintColor: focus ? '#005ce6' : 'grey'}]}
       />
       <TextInput
         style={styles.inputBox}
@@ -32,10 +32,6 @@ export default function InputText(props) {
         keyboardType={props.type == undefined ? 'default' : props.type}
         onFocus={() => setfocus(true)}
         onBlur={() => setfocus(false)}
-        // onPressIn={({ nativeEvent }) =>{
-        //   console.warn(nativeEvent.pageX, nativeEvent.timestamp);
-        //   setfocus(true)
-        // }}
         secureTextEntry = {props.hide == undefined ? false : props.hide}
       />
     </View>
