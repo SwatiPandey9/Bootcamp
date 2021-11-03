@@ -4,10 +4,6 @@ import {Provider} from 'react-redux';
 
 import Navigation from './src/routes/StackNav';
 
-import Counter from './src/screen/Counter';
-import InterviewQue from './src/screen/InterviewQue';
-// import Lifecycle from './src/screen/Lifecycle';
-
 const App = () => {
   return (
     <Provider store={store} >
@@ -16,29 +12,5 @@ const App = () => {
 
     );
 };
-
-// const App = () => {
-//   return <Lifecycle />;
-// };
-
-// import React from 'react';
-
-// import {NavigationContainer} from '@react-navigation/native';
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
-// import {HomeScreen, Profile} from './src/screen'
-// import { Provider } from 'react-redux';
-// import store from './src/redux/store';
-// import Counter from './src/screen/Counter';
-
-// const Tab = createBottomTabNavigator();
-
-// const App = () => {
-//   return(
-//     <Provider store={store}>
-//       <Counter />
-//     </Provider>
-//   )
-// };
 
 export default App;
