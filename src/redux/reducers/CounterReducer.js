@@ -18,4 +18,3 @@ const CounterReducer = (state = INITAIL_STATE, action) => {
 };
 
 export default CounterReducer;
-//in the place of state write prevState 
