@@ -15,16 +15,7 @@ import {Colors, Styles} from '../utils';
 const {height, width} = Dimensions.get('window');
 
 class DetailScreen extends Component {
-  // constructor(props) {
-  //   super();
-  //   const {item} = props.route.params;
-  //   this.state = {
-  //     object: item,
-  //     title: item.title,
-  //     body: item.body,
-  //     id: item.id,
-  //   };
-  // }
+  
   item = this.props.route.params.item;
 
   state = {
@@ -144,7 +135,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    updateTitle: data => dispatch({type: 'UPDATE_TITLE', payload: data}),
     objectUpdate: (title, id, body) =>
       dispatch(updateObjectAction(title, id, body, dispatch)),
   };
