@@ -1,7 +1,5 @@
 const INITIAL_STATE = {
   apiData: [],
-  updateDataObject: {},
-  title: '',
   objectUpdate: {},
 };
 
