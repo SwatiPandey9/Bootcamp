@@ -81,7 +81,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    updateName: name => dispatch({type: 'UPDATE_NAME', payload: name}),
     updateData: data => dispatch(uploadDataAction(data, dispatch)),
   };
 };
