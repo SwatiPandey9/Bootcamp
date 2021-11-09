@@ -11,7 +11,6 @@ export default class App extends Component {
     const rootStore = new RootStore();
     return (
       <Provider
-        counterStore={rootStore.counterStore}
         addStore={rootStore.addStore}
         >
         <Navigation />
