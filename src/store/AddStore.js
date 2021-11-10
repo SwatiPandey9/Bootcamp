@@ -7,9 +7,11 @@ class AddStore {
   @observable dataArray = [];
  
 
+
+
   @action
   addData(title, body) {
-    this.dataArray.push({title: title, body: body});
+    this.dataArray = [...this.dataArray, {title: title, body: body}]
   }
 
   @action
@@ -32,5 +34,10 @@ class AddStore {
     this.dataArray = obj
   }
 
+  @computed get getDataArray() {
+    return this.dataArray;
+  }
+}
 
 export default AddStore;
+
