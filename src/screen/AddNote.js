@@ -19,11 +19,11 @@ const {height, width} = Dimensions.get('window');
 @inject('addStore')
 @observer
 class AddNote extends Component {
+  params = this.props.route.params;
   state = {
-    txt: '',
-    body: '',
-    titleFocus: false,
-    bodyFocus: false,
+    txt: this.params.title,
+    body: this.params.body,
+    id: this.params.id,
   };
   changeText = text => {
     this.setState({txt: text});
@@ -33,8 +33,12 @@ class AddNote extends Component {
     this.setState({body: text});
   };
 
-  saveData = (title, body) => {
-    this.props.addStore.addData(title, body);
+  saveData = (title, body, index) => {
+    if (this.props.route.params.title == '') {
+      this.props.addStore.addData(title, body, index);
+    } else {
+      this.props.addStore.updateDataArray(title, body, index);
+    }
     this.props.navigation.navigate('HomeScreen');
   };
 
@@ -63,7 +67,7 @@ class AddNote extends Component {
 
         <TouchableOpacity
           onPress={() => {
-            this.saveData(this.state.txt, this.state.body);
+            this.saveData(this.state.txt, this.state.body, this.state.id);
           }}
           style={styles.imageContainer}>
           <Image source={require('../assets/check.png')} style={styles.image} />
@@ -78,12 +82,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   titleText: {
-    marginVertical: height/60,
-    marginLeft: width/25,
+    marginVertical: height / 60,
+    marginLeft: width / 25,
   },
   bodyText: {
-    marginVertical: height/60,
-    marginLeft: width/25,
+    marginVertical: height / 60,
+    marginLeft: width / 25,
   },
   imageContainer: {
     flex: 1,
@@ -91,10 +95,11 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   image: {
-    marginRight: width/20,
+    marginRight: width / 20,
     height: 50,
     width: 50,
   },
 });
 
 export default AddNote;
+
