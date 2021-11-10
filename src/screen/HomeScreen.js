@@ -7,6 +7,7 @@ import {
   StyleSheet,
   View,
   Dimensions,
+  Alert,
 } from 'react-native';
 import {String} from '../utils/index';
 import {CustomButton} from '../components';
@@ -16,6 +17,23 @@ const {height, width} = Dimensions.get('window');
 @inject('addStore')
 @observer
 class HomeScreen extends Component {
+
+  deleteData = (i) => {
+    Alert.alert('Hold on', 'Are you sure you want to delete', [
+      {
+        text: 'Cancel',
+        onPress: () => null ,
+        style:'cancel'
+      },
+      {
+        text:'Delete',
+        onPress:() => {this.props.addStore.removeElement(i)},
+        style:'destructive'
+      }
+    ]
+    )
+  }
+
   render() {
     return (
       <SafeAreaView style={styles.container}>
@@ -28,8 +46,16 @@ class HomeScreen extends Component {
               <View key={i} style={styles.itemList}>
               
                 <TouchableOpacity
+                  onLongPress={() => {
+                    this.deleteData(i)
+                    // this.props.addStore.removeElement(i);
+                  }}
                   onPress={() => {
-                    this.props.addStore.removeElement(i);
+                    this.props.navigation.navigate('AddNote', {
+                      id: i,
+                      title: item.title,
+                      body: item.body,
+                    });
                   }}
                   style={styles.itemContainer}>
                   <Text style={styles.titleText}>{item.title}</Text>
@@ -40,7 +66,7 @@ class HomeScreen extends Component {
 
                 <TouchableOpacity
                   onPress={() => {
-                    this.props.navigation.navigate('UpdateNote', {
+                    this.props.navigation.navigate('AddNote', {
                       id: i,
                       title: item.title,
                       body: item.body,
@@ -55,7 +81,11 @@ class HomeScreen extends Component {
 
         <View style={styles.buttonContainer}>
           <CustomButton
-            onPress={() => this.props.navigation.navigate('AddNote')}
+            onPress={() => this.props.navigation.navigate('AddNote', {
+              id: '',
+              title: '',
+              body: '',
+            })}
             text={String.addNewNote}
             style={{marginRight: width/20}}
           />
@@ -104,3 +134,4 @@ const styles = StyleSheet.create({
 });
 
 export default HomeScreen;
+
