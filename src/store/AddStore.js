@@ -5,9 +5,6 @@ class AddStore {
     makeObservable(this);
   }
   @observable dataArray = [];
- 
-
-
 
   @action
   addData(title, body) {
