@@ -17,38 +17,35 @@ const {height, width} = Dimensions.get('window');
 @inject('addStore')
 @observer
 class HomeScreen extends Component {
-
-  deleteData = (i) => {
+  deleteData = i => {
     Alert.alert('Hold on', 'Are you sure you want to delete', [
       {
         text: 'Cancel',
-        onPress: () => null ,
-        style:'cancel'
+        onPress: () => null,
+        style: 'cancel',
       },
       {
-        text:'Delete',
-        onPress:() => {this.props.addStore.removeElement(i)},
-        style:'destructive'
-      }
-    ]
-    )
-  }
+        text: 'Delete',
+        onPress: () => {
+          this.props.addStore.removeElement(i);
+        },
+        style: 'destructive',
+      },
+    ]);
+  };
 
   render() {
     return (
       <SafeAreaView style={styles.container}>
-
         <View>
           {this.props.addStore.dataArray.length === 0 ? (
             <Text style={styles.homeScreenText}>{String.homeScreenText}</Text>
           ) : (
             this.props.addStore.dataArray.map((item, i) => (
               <View key={i} style={styles.itemList}>
-              
                 <TouchableOpacity
                   onLongPress={() => {
-                    this.deleteData(i)
-                    // this.props.addStore.removeElement(i);
+                    this.deleteData(i);
                   }}
                   onPress={() => {
                     this.props.navigation.navigate('AddNote', {
@@ -63,17 +60,6 @@ class HomeScreen extends Component {
                     {item.body}
                   </Text>
                 </TouchableOpacity>
-
-                <TouchableOpacity
-                  onPress={() => {
-                    this.props.navigation.navigate('AddNote', {
-                      id: i,
-                      title: item.title,
-                      body: item.body,
-                    });
-                  }}>
-                  <Text style={styles.editText}>{String.edit}</Text>
-                </TouchableOpacity>
               </View>
             ))
           )}
@@ -81,16 +67,17 @@ class HomeScreen extends Component {
 
         <View style={styles.buttonContainer}>
           <CustomButton
-            onPress={() => this.props.navigation.navigate('AddNote', {
-              id: '',
-              title: '',
-              body: '',
-            })}
+            onPress={() =>
+              this.props.navigation.navigate('AddNote', {
+                id: '',
+                title: '',
+                body: '',
+              })
+            }
             text={String.addNewNote}
-            style={{marginRight: width/20}}
+            style={{marginRight: width / 20}}
           />
         </View>
-        
       </SafeAreaView>
     );
   }
@@ -108,10 +95,7 @@ const styles = StyleSheet.create({
   itemList: {
     width: width - 50,
     marginVertical: height / 80,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    alignSelf: 'center',
+    marginLeft: width / 12,
   },
   itemContainer: {
     width: width * 0.75,
@@ -123,9 +107,6 @@ const styles = StyleSheet.create({
   bodyText: {
     color: '#626567',
   },
-  editText: {
-    fontSize: width / 28,
-  },
   buttonContainer: {
     flex: 1,
     alignSelf: 'flex-end',
@@ -134,4 +115,5 @@ const styles = StyleSheet.create({
 });
 
 export default HomeScreen;
+
 
