@@ -14,16 +14,6 @@ import Realm from 'realm';
 
 const {height, width} = Dimensions.get('window');
 
-// const employeeSchema = {
-//   name: 'Employee',
-//   properties: {
-//     _id: 'int',
-//     name: 'string',
-//     designation: 'string',
-//     salary: 'int',
-//   },
-// };
-
 
 class AddEmpDetails extends Component {
   state = {
@@ -59,9 +49,6 @@ class AddEmpDetails extends Component {
     });
   };
 
-// componentDidMount(){
-//    this.realm = new Realm({schema: [employeeSchema]})
-// }
 
 // Saving Data in DB -----------------
 
@@ -79,10 +66,6 @@ const employeeSchema = {
 };
 
 this.realm = new Realm({schema: [employeeSchema]})
-    // this.realm = await Realm.open({
-    //   schema: [employeeSchema],
-    // });
-    // console.log(realm.objects('Employee'));
     const {employeeId, name, salary, designation} = this.state
     if(employeeId.length  === '' || name.length == '' || salary.length === '' || designation.length == '' ){
       alert('Please fill all details')
@@ -100,16 +83,6 @@ this.realm = new Realm({schema: [employeeSchema]})
       });
       this.props.navigation.goBack()
     }
-    // realm.write(async () => {
-    //     details = await realm.create('Employee', {
-    //       _id: this.state.employeeId,
-    //       name: this.state.name,
-    //       designation: this.state.designation,
-    //       salary: this.state.salary,
-    //     });
-    //     console.log(details);
-    //   });
-    //   this.props.navigation.goBack()
     
   }
 
@@ -161,10 +134,8 @@ const styles = StyleSheet.create({
   header: {
     width: width,
     backgroundColor: '#F1C40F',
-    // justifyContent: 'space-between',
     alignSelf: 'center',
     padding: height / 50,
-    // flexDirection: 'row',
   },
   headerText: {
     textAlign: 'center',
