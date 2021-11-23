@@ -33,8 +33,6 @@ class HomeScreen extends Component {
 
   displayContacts = rowData => {
     const {item, index} = rowData;
-    // console.log('item, ite', item);
-    // console.log(index)
 
     return (
       <View style={{flex: 1}}>
@@ -82,7 +80,6 @@ class HomeScreen extends Component {
           </View>
           <View>
             {Object.entries(this.props.data).map((item, key) => {
-            //   console.log('item  ==> ', item[0], item[1], this.props.data);
               return (
                 <View key={key}>
                   <Text style={styles.alphabet}>{item[0].toString()}</Text>
