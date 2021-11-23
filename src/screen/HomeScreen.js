@@ -128,12 +128,6 @@ const styles = StyleSheet.create({
     width: width,
     backgroundColor: Colors.iconBackgroundColor,
   },
-  //   gridView: {
-  //     flexDirection: 'row',
-  //     backgroundColor: 'yellow',
-  //     flexWrap: 'wrap',
-  //     width: width,
-  //   },
   alphabet: {
     fontSize: height / 35,
     marginLeft: height / 30,
