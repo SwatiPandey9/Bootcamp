@@ -18,8 +18,7 @@ const HomeScreenReducer = (state= INITIAL_STATE, action) => {
             return{...state, isLoading: false, error: action.payload};
          
         case 'DELETE_DATA':
-            // console.log(state.arrData)
-
+            
             const filterarrDataList = state.arrData.filter(
                 arrData => arrData.index !== action.payload,
               );
